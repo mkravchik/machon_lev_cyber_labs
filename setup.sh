@@ -21,4 +21,11 @@ create table t_users(user_id INT NOT NULL AUTO_INCREMENT,  first_name VARCHAR(10
 insert into t_users (first_name, last_name) VALUES ("Alice", "Wonderland");
 insert into t_users (first_name, last_name) VALUES ("Bob", "Sponge");
 insert into t_users (first_name, last_name) VALUES ("Jim", "Naive-Admin");
+USE mysql;
+UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+COMMIT;
+UPDATE mysql.user SET authentication_string=PASSWORD('') where user='root';
+FLUSH PRIVILEGES;
+COMMIT;
 MYSQL_SCRIPT
+sudo service mysql restart
