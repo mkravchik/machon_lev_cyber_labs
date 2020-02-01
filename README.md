@@ -12,5 +12,5 @@ This workspace contains all the required installations and files needed for the 
 Well, almost. Until I find a way to preinstall everything and allow you to clone it, please start 
 with the one-time installation. Run the following in your bash command line:
 
-./shell.sh
+./setup.sh
 
