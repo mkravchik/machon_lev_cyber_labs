@@ -1,6 +1,6 @@
 sudo apt-get update
 #PHP is preinstalled
-sudo apt-get install john python gcc openssl mysql-server mysql-client apache2 subversion python-pip python-crypto wamerican-large python-apt
+sudo apt-get install -y john python gcc openssl mysql-server mysql-client apache2 subversion python-pip python-crypto wamerican-large python-apt
 #start mysql on boot
 sudo update-rc.d mysql defaults
 sudo update-rc.d mysql enable
