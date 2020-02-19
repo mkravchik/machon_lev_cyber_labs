@@ -3,7 +3,7 @@ import Crypto.Cipher.AES as AES
 import hashlib
 
 car = "<A_WELL_KNOWN_CAR_BRAND_GOES_HERE>"
-sec = hashlib.sha256(car  + '<REVERSED_CAR_BRAND_NAME_GOES_HERE>' + 'MachonLev2019').digest()
+sec = hashlib.sha256(car  + '<REVERSED_CAR_BRAND_NAME_GOES_HERE>' + 'MachonLev2019').encode('utf-8')).digest()
 cipher = AES.new(sec, AES.MODE_ECB)
 message = '<SECRET_MESSAGE_GOES_HERE>'
 secret = cipher.encrypt(message).encode("hex")
