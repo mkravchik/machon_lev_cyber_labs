@@ -2,7 +2,7 @@ SRCS = $(wildcard *.c)
 
 PROGS = $(patsubst %.c,%,$(SRCS))
 
-CFLAGS = -fno-stack-protector -m32 -O0
+CFLAGS = -fno-stack-protector -m32 -O0 -g
 
 all: $(PROGS)
 
