@@ -9,6 +9,7 @@ sudo service mysql start
 #add 32 bit support
 sudo dpkg --add-architecture i386
 sudo apt-get install -y libc6-i386 libc6-dev-i386
+sudo apt-get install -y gdb
 
 pip install -r ./requirements.txt
 # create and populate the DB
