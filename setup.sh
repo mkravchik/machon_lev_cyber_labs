@@ -30,3 +30,8 @@ FLUSH PRIVILEGES;
 COMMIT;
 MYSQL_SCRIPT
 sudo service mysql restart
+
+echo "enter your username in JCT"
+read Uname
+cp ~/.bashrc ~/.bashrc.bak
+sed -i s/\$C9_USER/$Uname/g ~/.bashrc
