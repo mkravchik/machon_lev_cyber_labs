@@ -2,14 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-int secretCode = ###CODE###;
+int secretCode = 1;
 
 #define STATUS_WINNER 'WIN!'
 
 typedef struct _word_struct
 {
-    char word[32 + ###RND###];
-    char result[48 + ###RND###];
+    char word[32 + 4];
+    char result[48 + 4];
     int status;
 } word_struct, *word_data;
 
