@@ -35,7 +35,7 @@ len('Hello')
 'look at me'.split(' ')
 s = 'ugifletzet'
 s[1]
-# s[1] = 'G'
+s[1] = 'G'
 S = s.upper()
 S.lower()
 
@@ -60,7 +60,7 @@ y = x[:]
 y.append(4)
 t = (1, 2, 3)
 t
-# t[0] = 2
+t[0] = 2
 (a, b, c) = (1, 2, 3)
 x, y = y, x
 d = {}
@@ -142,5 +142,4 @@ for c in cipher:
 print(plain)
 
 
-# in python3 you can also do 
-# cipher.translate(str.maketrans({'w':'t', 'r':'o'}))
+
