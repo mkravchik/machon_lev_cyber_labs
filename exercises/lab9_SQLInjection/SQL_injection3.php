@@ -5,7 +5,7 @@
     //$c = mysqli_connect("localhost", "root", "password", "users");
     $c = mysqli_connect("localhost", "root", "", "users");
     if(!$c){
- 	echo('Could not connect to db. Contact someone who can help'. mysqli_connect_error());
+ 	echo('Could not connect to db. Contact someone who can help'. mysql_error());
     }
 
     $id = $_GET['id'] or die('<pre> id was not specified</pre>' );

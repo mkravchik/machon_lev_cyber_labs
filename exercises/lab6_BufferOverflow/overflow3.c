@@ -40,7 +40,7 @@ void shell(void) {
 void vuln(char *str) {
     char buf[64];
     strcpy(buf, str);
-    dump_stack((void **) buf, 23, (void **) &str);
+    dump_stack((void **) buf, 21, (void **) &str);
 }
 
 int main(int argc, char **argv) {
