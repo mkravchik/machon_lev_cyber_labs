@@ -6,9 +6,7 @@ set -e
 sudo mysql --defaults-file=/etc/mysql/debian.cnf -uroot <<MYSQL_SCRIPT
 USE mysql;
 UPDATE user SET plugin='mysql_native_password' WHERE User='root';
-COMMIT;
-UPDATE mysql.user SET authentication_string=PASSWORD('') where user='root';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '';
 FLUSH PRIVILEGES;
-COMMIT;
 MYSQL_SCRIPT
 sudo service mysql restart

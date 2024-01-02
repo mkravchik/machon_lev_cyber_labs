@@ -1,6 +1,6 @@
 sudo apt-get update
 #PHP is preinstalled
-sudo apt-get install -y john python gcc openssl mysql-server mysql-client apache2 subversion python-pip python-crypto wamerican-large python-apt
+sudo apt-get install -y john python3 gcc openssl mysql-server mysql-client apache2 subversion python3-pip wamerican-large python3-apt
 #start mysql on boot
 sudo update-rc.d mysql defaults
 sudo update-rc.d mysql enable
@@ -24,10 +24,8 @@ insert into t_users (first_name, last_name) VALUES ("Bob", "Sponge");
 insert into t_users (first_name, last_name) VALUES ("Jim", "Naive-Admin");
 USE mysql;
 UPDATE user SET plugin='mysql_native_password' WHERE User='root';
-COMMIT;
-UPDATE mysql.user SET authentication_string=PASSWORD('') where user='root';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '';
 FLUSH PRIVILEGES;
-COMMIT;
 MYSQL_SCRIPT
 sudo service mysql restart
 

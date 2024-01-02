@@ -1,5 +1,5 @@
 argparse
 httplib2
-pycrypto
+pycryptodome
 requests
 urllib3
