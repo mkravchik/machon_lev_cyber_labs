@@ -33,3 +33,8 @@ echo "enter your username in JCT"
 read Uname
 cp ~/.bashrc ~/.bashrc.bak
 sed -i s/\$C9_USER/$Uname/g ~/.bashrc
+
+# set the password hashing so that john 1.8 can work with it
+sudo cp /etc/pam.d/common-password /etc/pam.d/common-password.bak
+sudo sed -i '/pam_unix.so/ s/^.*$/password    [success=1 default=ignore]  pam_unix.so obscure sha512/' /etc/pam.d/common-password
+
