@@ -40,4 +40,5 @@ sudo sed -i '/pam_unix.so/ s/^.*$/password    [success=1 default=ignore]  pam_un
 if ! grep -q "pam_unix.so.*sha512" /etc/pam.d/common-password; then
   echo "Alert: The password hashing algorithm is not set to SHA-512."
 fi
+echo export PS1="$(_cloud9_prompt_user):$ ">> ~/.bashrc
 
