@@ -10,7 +10,7 @@ sudo service mysql start
 sudo dpkg --add-architecture i386
 sudo apt-get install -y libc6-i386 libc6-dev-i386
 sudo apt-get install -y gdb
-sudo apt install python3.12-venv
+sudo apt install python3-venv
 python3 -m venv cyber
 source cyber/bin/activate
 pip3 install -r ./requirements.txt 
