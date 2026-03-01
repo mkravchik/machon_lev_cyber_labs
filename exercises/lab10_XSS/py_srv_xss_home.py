@@ -19,7 +19,6 @@ class ServerHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
-        self.send_header("X-XSS-Protection", "0")  # Disabled for testing
         self.end_headers()
         
         params = parse_qs(urlparse(self.path).query)
@@ -27,7 +26,8 @@ class ServerHandler(SimpleHTTPRequestHandler):
 
         username = ''
         if 'query' in params:
-            username = params['query'][0].replace("script", "XSS").replace("SCRIPT", "XSS").replace("\"","&quot;").replace("\'","&quot;")
+            username = params['query'][0].lower()
+            username = username.replace("script", "XSS").replace("\"","&quot;").replace("\'","&quot;")
 
         res = template.replace('%USERNAME%', username)
 
