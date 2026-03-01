@@ -1,6 +1,6 @@
 sudo apt-get update
 #PHP is preinstalled
-sudo apt-get install -y john python3 python-is-python3 gcc openssl mysql-server mysql-client php-cli python3-pip wamerican-large python3-apt
+sudo apt-get install -y john python3 python-is-python3 gcc openssl mysql-server mysql-client php-cli php-mysql python3-pip wamerican-large python3-apt
 #start mysql on boot
 sudo update-rc.d mysql defaults
 sudo update-rc.d mysql enable
@@ -10,7 +10,7 @@ sudo service mysql start
 sudo dpkg --add-architecture i386
 sudo apt-get install -y libc6-i386 libc6-dev-i386
 sudo apt-get install -y gdb
-sudo apt install python3.12-venv
+sudo apt install python3-venv
 python3 -m venv cyber
 source cyber/bin/activate
 pip3 install -r ./requirements.txt 
