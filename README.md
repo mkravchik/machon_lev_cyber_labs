@@ -6,14 +6,10 @@
       |___/                    \____/                     
 
 
-Hi there! Welcome to the Introduction to Cyber Security Course @ JCT!
+Hi there! Welcome to AWS Cloud9 IDE for Machon Lev Introduction to Cyber Security Course!
 
-Your VM environment should contain everything you need for the labs. 
+This workspace contains all the required installations and files needed for the labs.
+Well, almost. Until I find a way to preinstall everything and allow you to clone it, please start 
+with one-time installation. Run the following in your bash command line:
 
-To start using it, run in the terminal
-`./startup.sh`
-
-If somehow things are not working, reinstall the prerequisites by 
-running the following in your bash command line:
 `./setup.sh`
-
