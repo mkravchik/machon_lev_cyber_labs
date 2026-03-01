@@ -40,7 +40,7 @@ void vuln(int win, char *str) {
     printf("win = %d\n", win);
     if (win == 1) {
         // execl("/bin/sh", "sh", NULL);
-        printf("\nYOU WIN. At this point would would get a shell\n");
+        printf("\nYOU WIN. At this point you would get a shell\n");
         // Print flag
         printf("Go get your treasure, the code is flag{%d}\n", secretCode);
         fflush(stdout);
