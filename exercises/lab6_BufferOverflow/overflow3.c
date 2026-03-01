@@ -34,7 +34,7 @@ void dump_stack(void **stack, size_t n, void **arg0) {
  * Goal: Get the program to run this function.
  */
 void shell(void) {
-    execl("/bin/sh", "sh", NULL);
+    execl("/bin/bash", "bash", NULL);
 }
 
 void vuln(char *str) {

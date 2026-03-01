@@ -35,7 +35,7 @@ void vuln(int tmp, char *str) {
     dump_stack((void **) buf, 23, (void **) &tmp);
     printf("win = %d\n", win);
     if (win == 1) {
-        execl("/bin/sh", "sh", NULL);
+        execl("/bin/bash", "bash", NULL);
     } else {
         printf("Sorry, you lose.\n");
     }
