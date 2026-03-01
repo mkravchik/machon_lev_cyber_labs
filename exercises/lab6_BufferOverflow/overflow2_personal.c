@@ -5,7 +5,10 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-int secretCode = ###CODE###;
+#define  CODE 13
+#define RND 0
+
+int secretCode = CODE;
 
 void dump_stack(void **stack, size_t n, void **arg0) {
     void** arg0_ = stack + n;
@@ -30,7 +33,7 @@ void dump_stack(void **stack, size_t n, void **arg0) {
 
 void vuln(int win, char *str) {
     int win_ = win;
-    int dummy[3 + ###RND###];
+    int dummy[3 + RND];
     char buf[64];
     size_t register dump_len = ((uintptr_t) &str - (uintptr_t) &buf[0]) / sizeof(void *) + 1;
 
