@@ -2,12 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-// amount of memory allocated for input_data
-#define INPUT_DATA_SIZE 5 + ###RND###
-// amount of memory allocated for safe_var
-#define SAFE_VAR_SIZE 5 + ###RND###
+#define  CODE 13
+#define RND 0
 
-int secretCode = ###CODE###;
+int secretCode = CODE;
+
+// amount of memory allocated for input_data
+#define INPUT_DATA_SIZE 5 + RND
+// amount of memory allocated for safe_var
+#define SAFE_VAR_SIZE 5 + RND
 
 int num_allocs;
 char *safe_var;

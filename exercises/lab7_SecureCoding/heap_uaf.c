@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-int secretCode = ###CODE###;
+#define  CODE 13
+#define RND 0
+
+int secretCode = CODE;
 
 // Create struct
 typedef struct {
-  char a[10 + ###RND###];
+  char a[10 + RND];
   char flag[5];
 } object;
 

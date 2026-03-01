@@ -2,13 +2,16 @@
 #include <string.h>
 #include <stdlib.h>
 
-int secretCode = ###CODE###;
+#define  CODE 13
+#define RND 0
+
+int secretCode = CODE;
 
 #define STATUS_GUESSED 0x0
 #define STATUS_FAIL 0x1
 typedef struct _word_struct
 {
-    char word[32 + ###RND###];
+    char word[32 + RND];
     int status;
 } word_struct;
 
